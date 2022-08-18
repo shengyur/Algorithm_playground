@@ -1,7 +1,6 @@
 // 普通队列
 // 先进先出，从尾部插入，从头部弹出
 
-
 class Queue {
     constructor(n){
         this.arr = new Array(n)

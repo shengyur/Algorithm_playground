@@ -1,7 +1,7 @@
 /**
  * 循环队列
  */
- class Queue {
+ class QueueCir {
     constructor (n) {
       this.arr = new Array(n);
       this.head = this.tail = 0;

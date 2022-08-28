@@ -1,68 +1,14 @@
-class Stack{
-    constructor() {
-        this.count = 0;
-        this.items = {}
-    }
-
-    push(ele) {
-        this.items[this.count] = ele
-        this.count ++
-    }
-
-    pop() {
-        if(this.isEmpty()) {return undefined}
-
-        this.count--;
-
-        const result = this.items[this.count]
-        delete this.items[this.count]
-
-        return result
-    }
-
-    // 返回栈顶元素，不操作栈
-    peek() {
-        if(this.isEmpty()) return undefined
-
-        return this.items[this.count - 1]
-    }
-
-    // 栈是否为空
-    isEmpty() {
-        return this.count === 0
-    }
-
-    // 移除栈里的所有元素
-    clear() {
-        this.items = {}
-        this.count = 0
-
-        while(!this.isEmpty()){
-            this.pop()
-        }
-    }
-
-    // 返回栈里面的元素个数
-    size() {
-        return this.count
-    }
-
-    toString() {
-        if(this.isEmpty()) return ''
-
-        let objString = ''
-        for(let i=0; i< this.count; i++) {
-            objString += `${this.items[i]},`
-        }
-
-        return objString
-    }
- }
-
- const s = new Stack()
-
- s.push(5)
- s.push(8)
- s.push(10)
-
- console.log(s.toString())
+const graph = new Graph(); const myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; // {12} 
+for (let i = 0; i < myVertices.length; i++) { // {13}   
+    graph.addVertex(myVertices[i]);
+} 
+graph.addEdge('A', 'B'); // {14}  
+graph.addEdge('A', 'C'); 
+graph.addEdge('A', 'D')
+graph.addEdge('C', 'D')
+graph.addEdge('C', 'G')
+graph.addEdge('D', 'G')
+graph.addEdge('D', 'H')
+graph.addEdge('B', 'E')
+graph.addEdge('B', 'F');
+graph.addEdge('E', 'I');

@@ -11,5 +11,17 @@ function defaultCompare(a, b) {
   return a < b ? Compare.LESS_THAN : Compare.BIGGER_THAN;
 }
 
+function defaultToString(item) {
+  if (item === null) {
+    return 'NULL';
+  } else if (item === undefined) {
+    return 'UNDEFINED';
+  } else if (typeof item === 'string' || item instanceof String) {
+    return `${item}`;
+  }
+  return item.toString();
+}
+
 exports.Compare = Compare
 exports.defaultCompare = defaultCompare
+exports.defaultToString = defaultToString

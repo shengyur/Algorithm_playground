@@ -61,19 +61,20 @@ class Queue {
     }
 }
 
-const queue = new Queue()
-console.log(queue.isEmpty())
+// const queue = new Queue()
+// console.log(queue.isEmpty())
 
-queue.enqueue('John')
-queue.enqueue('Jay')
+// queue.enqueue('John')
+// queue.enqueue('Jay')
 
-console.log(queue.toString())
+// console.log(queue.toString())
 
-queue.enqueue('Camila')
-console.log(queue.toString())
+// queue.enqueue('Camila')
+// console.log(queue.toString())
 
-queue.dequeue()
-queue.dequeue()
+// queue.dequeue()
+// queue.dequeue()
 
-console.log(queue.toString())
+// console.log(queue.toString())
 
+module.exports = Queue

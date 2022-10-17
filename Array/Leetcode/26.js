@@ -6,7 +6,11 @@ var removeDuplicates1 = function(nums) {
         if(nums[i] !== nums[i-1]){
             nums[n] = nums[i]
             n++
-        }        
+        }    
+        
+        if(nums[i+1] !== nums[i]){
+            
+        }
     }
 
     return nums.slice(0,n)
@@ -16,6 +20,7 @@ var removeDuplicates1 = function(nums) {
 var removeDuplicates2 = function(nums){
     let n = 0;
     for (let i = 0; i < nums.length; i++) {
+        //边界条件
         if (i == 0 || nums[i] != nums[i - 1]) {
             nums[n] = nums[i];
             n++;
